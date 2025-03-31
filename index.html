@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timeline UI</title>
+    <style>
+      body {
+        background-color: #1a1a2e;
+        color: white;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .timeline {
+        position: relative;
+        max-width: 600px;
+      }
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 30px;
+        width: 4px;
+        height: 100%;
+        background: #ccc;
+      }
+      .event {
+        display: flex;
+        margin: 20px 0;
+        position: relative;
+      }
+      .icon {
+        width: 60px;
+        height: 60px;
+        background: gray;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        color: white;
+        position: absolute;
+        left: 0;
+      }
+      .content {
+        background: #2f2f4f;
+        padding: 15px;
+        margin-left: 80px;
+        border-radius: 10px;
+        width: 80%;
+        position: relative;
+      }
+      .primary {
+        background: #007bff;
+      }
+      .danger {
+        background: #dc3545;
+      }
+      .success {
+        background: #28a745;
+      }
+      #primary,
+      #danger,
+      #success {
+        padding: 0.3rem 1rem;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="timeline">
+      <div class="event">
+        <div class="icon primary">😀</div>
+        <div class="content">
+          <strong id="primary" class="primary">Primary</strong>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+            ratione modi deserunt? Alias necessitatibus magni provident in,
+            iste, deserunt minima, cumque neque numquam repudiandae dolores non
+            beatae! Praesentium minus deserunt debitis delectus.
+          </p>
+          <small>1 hour ago</small>
+        </div>
+      </div>
+      <div class="event">
+        <div class="icon danger">😃</div>
+        <div class="content">
+          <strong id="danger" class="danger">Danger</strong>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+            ratione modi deserunt? Alias necessitatibus magni provident in,
+            iste, deserunt minima, cumque neque numquam repudiandae dolores non
+            beatae! Praesentium minus deserunt debitis delectus.
+          </p>
+          <small>2 hours ago</small>
+        </div>
+      </div>
+      <div class="event">
+        <div class="icon success">😆</div>
+        <div class="content">
+          <strong id="success" class="success">Success</strong>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+            ratione modi deserunt? Alias necessitatibus magni provident in,
+            iste, deserunt minima, cumque neque numquam repudiandae dolores non
+            beatae! Praesentium minus deserunt debitis delectus.
+          </p>
+          <small>6 hours ago</small>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
